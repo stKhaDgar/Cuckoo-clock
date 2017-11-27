@@ -65,13 +65,11 @@ namespace Cuckoo_clock
             yMin = 100 * (float)Math.Sin(angleMinute) + 130;
             xHour = 70 * (float)Math.Cos(angleHour) + 180;
             yHour = 70 * (float)Math.Sin(angleHour) + 130;
-
             if (angleSeconds > 10.995)
             {
                 angleSeconds = Math.PI * 1.5;
                 angleMinute += 0.104;
             }
-
             if(angleMinute > 10.995)
             {
                 angleMinute = Math.PI * 1.5;
