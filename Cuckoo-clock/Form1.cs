@@ -24,9 +24,8 @@ namespace Cuckoo_clock
         public Form1()
         {
             InitializeComponent();
-            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            gr = pictureBox1.CreateGraphics();
-            angleSeconds = 0;
+            gr = panel1.CreateGraphics();
+            angleSeconds = Math.PI * 1.5;
             myPen = new Pen(Brushes.Black, 3);
 
             secondNows.Interval = 1000;
@@ -37,13 +36,14 @@ namespace Cuckoo_clock
 
         public void secondNowTimer(object sender, EventArgs e)
         {
-            gr.Clear(Color.White);
-            angleSeconds += 0.2;
+            gr.Clear(Color.Gainsboro);
+            
 
-            x = 90 * (float)Math.Cos(angleSeconds) + 292;
-            y = 90 * (float)Math.Sin(angleSeconds) + 281;
+            x = 90 * (float)Math.Cos(angleSeconds) + 180;
+            y = 90 * (float)Math.Sin(angleSeconds) + 130;
 
-            gr.DrawLine(myPen, 292, 281, x, y);
+            angleSeconds += 0.104;
+            gr.DrawLine(myPen, 180, 130, x, y);
 
             Console.WriteLine("Рисуй сука");
         }
