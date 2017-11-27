@@ -40,13 +40,14 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(584, 661);
             this.label1.TabIndex = 0;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(291, 280);
+            this.label2.Location = new System.Drawing.Point(292, 281);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(3, 3);
+            this.label2.Size = new System.Drawing.Size(1, 1);
             this.label2.TabIndex = 1;
             // 
             // Form1
